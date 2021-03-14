@@ -1,4 +1,4 @@
-# training_01
+# training_02
 
 ## npm script
 
