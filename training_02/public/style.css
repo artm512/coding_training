@@ -1,0 +1,352 @@
+.mainvisual {
+  position: relative;
+} 
+
+.mainvisual img {
+  height: 700px;
+  object-fit: cover;
+  object-position: 0 15%;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);	
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);	
+}
+
+.mainvisual h2 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 5vw;
+  color: #fff;
+}
+
+@media screen and (max-width: 1199px) {
+  .mainvisual img {
+    height: auto;
+  }
+}
+
+/*===*/
+
+.topics {
+  padding: 120px;
+}
+
+.topics .content-wrapper {
+  display: -ms-flexbox;
+  display: -webkit-flex;  
+  display: flex;
+}
+
+.topics .heading {
+  width: 35%;
+}
+
+.topics .content {
+  width: 65%;
+}
+
+.topics .content table {
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.topics .content th {
+  padding: 20px 2em 20px 0;
+  border-bottom: 1px dotted;
+}
+
+.topics .content td {
+  border-bottom: 1px dotted;
+}
+
+.topics .content tr:last-of-type th,
+.topics .content tr:last-of-type td {
+  border-bottom: none;
+}
+
+.topics .content .btn {
+  margin: 0;
+}
+
+.topics .content .btn a {
+  display: block;
+  font-size: 0.8rem;
+  color: #000;
+  border: 1px solid #000;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+  margin: 0 0 0 auto;
+}
+
+.topics .content .btn a:hover {
+  background: #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 1199px) {
+  .topics {
+    padding: 50px 5vw;
+  }
+
+  .topics .content-wrapper {
+    display: block;
+  }
+
+  .topics .heading {
+    width: 100%;
+  }
+
+  .topics .heading h2 {
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+
+  .topics .content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .topics {
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .topics .content .btn a {
+    width: 35%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .topics .content th {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1.25em 0 0 0;
+    border-bottom: 0;
+  }
+
+  .topics .content td {
+    display: block;
+    width: 100%;
+  }
+}
+
+/*==*/
+
+.institution {
+  background: url(https://placehold.jp/4928x3264.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.institution::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.institution .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.institution h2 {
+  color: #fff;
+  text-align: left;
+}
+
+.institution p {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 70px;
+}
+
+.institution p.btn {
+  margin: 0;
+}
+
+.institution p.btn a {
+  color: #fff;
+  display: block;
+  font-size: 0.875rem;
+  border: 1px solid #fff;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.institution p.btn a:hover {
+  background: #fff;
+  color: #333;
+}
+
+ @media screen and (max-width: 479px) {
+  .institution .content {
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .institution h2,p {
+    text-align: center;
+  }
+
+  .institution p.btn a {
+    width: 30%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/*==*/
+
+.recruit {
+  padding: 10% 0;
+  position: relative;
+}
+
+.recruit::after {
+  content: "";
+  background-color: #f3f3f3;
+  height: 150%;
+  width: 40%;
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  transform-origin: left top;
+  transform: skewX(-30deg);
+  z-index: -1;
+}
+
+.recruit ul {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  -ms-flex-pack:justify;
+  -webkit-justify-content: space-between;
+  justify-content:space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  transform: skewY(2deg);
+}
+
+.recruit ul li {
+  width: 48%;
+  position: relative;
+}
+
+.recruit ul li figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 43%;
+  background: rgba(50, 50, 50, 0.7);
+  z-index: 1;
+  transition: all .6s ease;
+}
+
+.recruit ul li a:hover figure::after {
+  background: rgba(50, 50, 50, 0.4);
+  transition: all .6s ease;
+}
+
+.recruit li span {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skewY(-2deg);
+  z-index: 2;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .recruit ul {
+    transform: none;
+  }
+
+  .recruit li span {
+    transform: translate(-50%,-50%);
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .recruit ul li {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+}
+
+/*==*/
+
+.contact {
+  width: 100%;
+  height: 500px;
+  background: url(https://placehold.jp/5760x3840.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.contact::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.contact ul {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.contact li {
+  width: 300px;
+  margin: 0 50px;
+}
+
+.contact li a {
+  border: 1px solid #fff;
+  font-size: 1.25rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.contact li a:hover {
+  background: #fff;
+  color: #333;
+}
